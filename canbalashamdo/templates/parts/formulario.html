@@ -1,0 +1,74 @@
+<br>
+<div class="form_01">
+	<div class="imagen01"></div>
+	<form method="POST" action="{{ url_for('hacerRegistro') }}">
+		<fieldset>
+			<legend class="account">Datos Fundamentales <b style="color:red;">{{ msg }}</b></legend>
+			<ul>
+				<li>
+					<label for="nombre">Nombre Completo: </label>
+					<input type="text" name="nombre" class="large" placeholder="Juan Gosain Fernandez" required
+						title="Bebe llanar el espacio" />
+				</li>
+				<li>
+					<label for="apodo">Apodo ó Alias: </label>
+					<input type="text" name="apodo" class="large" placeholder="juan23" required
+						title="Bebe llanar el espacio" />
+				</li>
+				<li>
+					<label for="telefono">No Telefono: </label>
+					<input type="tel" name="telefono" class="large" placeholder="3213334444" required
+						title="Bebe llanar el espacio" />
+				</li>
+				<li>
+					<label for="email">Correo Electronico: </label>
+					<input type="email" name="email" class="large" placeholder="mrmarcos53@servidor.com" required
+						title="Bebe llanar el espacio" />
+				</li>
+				<li>
+					<label for="clave">Clave Secreta: </label>
+					<input type="password" name="clave" class="large" required title="Bebe llanar el espacio" />
+				</li>
+				<li>
+					<label for="clave">Fecha de Nacimiento: </label>
+					<input type="date" name="cumpleano" class="medium" placeholder="DD/MM/AAAA" required 
+						title="Bebe llanar el espacio" />
+				</li>
+				<div id="mensaje"></div>
+				<li id="inputCor">
+					<label for="acuerdo"></label>
+					<input type="checkbox" name="taxador" value="S" onClick="complemento()">Deseo ser Perito y Consultor </input>
+				</li>
+				<li id="inputCor">
+					<label for="acuerdo"></label>
+					<input type="checkbox" name="abeas_data" value="S"> Estoy de acuerdo con los términos y condiciones
+					del Servicio. </input>
+				</li>
+				<li>
+					<label for=""> </label>
+					<input type="submit" value="ENVIAR" />
+				</li>
+			</ul>
+		</fieldset>
+	</form>
+</div>
+
+<script type='text/javascript'>
+	 function complemento() {
+		var texto = "<li><label for='direccion'>Direccion: </label><input type='text' name='direccion' class='large' /></li>";
+		texto += '<li><label for="NumID"> No Documento: </label><input type="text" name="id_num" class="large" placeholder="1001999888" /></li>';
+		texto += '<li><label for="profesion">Profesión: </label><input type="text" name="profesion" class="large" placeholder="Administrador de Empresas" required title="Bebe llanar el espacio"/></li>';
+		texto += '<li><label for="exp_en">Aréa de experiencia: </label><input type="text" name="exp_en" class="large" placeholder="Venta de Carros" required title="Bebe llanar el espacio"/></li>';
+		texto += '<li><label for="exp_en">Años de experiencia: </label><input type="number" max="100" min="0" step="1" name="exp_tmp" class="small" value="0" required title="Bebe llanar el espacio"/></li>';
+		texto += '<li id="inputCor"><label for="genero">Genero: </label><input type="radio" name="genero" value="M">Masculino </input>';
+		texto += '<input type="radio" name="genero" value="F">Femenino </input><input type="radio" name="genero" value="N" checked="checked">No Declara </input></li>';
+		document.getElementById('mensaje').innerHTML=texto;
+	 }
+</script>
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ES-es">
+<head>
+    <meta charset="iso-8859-1">
+    <meta name="description" content="Facilita el libre intercambio de mercancias y productos">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-AU-Compatible" content="ie=edge">
+    <title> CANBALASHAMDO </title>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">        
+</head>
+<body>
+   
+	<header role="banner">
+        <aside style="float: left;">
+            <img class="demo" src="../../static/img/banner.png">
+        </aside>
+        <aside style="float: right;">
+            <nav class="nvo1" role="navigation">
+                <ul class="nvo2">
+                    <li class="nvo3"><a href="/">Inicio</a></li>
+                    <li class="nvo3"><a href="/nosotros">Canbalashamdo</a></li>
+                    <li class="nvo3"><a href="/contacto">Contacto</a></li>
+                    <li class="nvo3"><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+            <b>{{ usr }}</b>
+        </aside>
+    </header>
+
+	{% block principal %}
+	{% endblock %}
+
+	<footer role="contentinfo">
+        <div>
+            <p>
+                Posteado por: <b> Fabio Rueda </b><br>
+                Información de contacto: <br>
+                Email: <a href="mailto:faruca71@gmail.com"> <b>faruca71@gmail.com </b></a>. <br>
+                Celular:<b> 312 488 1394</b> <br> 
+                <b>&copy; 2020 Rueda Rodríguez e Hijos S.A.S.</b>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

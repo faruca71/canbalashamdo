@@ -1,0 +1,27 @@
+<br>
+<div class="form_01">
+	<div class="imagen01"></div>
+	<form method=post action="{{ url_for('hacerLogin') }}">
+		<fieldset>
+			<!-- <legend class="account">Login <b style="color: red;">{{ usr }}</b></legend> -->
+			<legend class="account">Login </legend>
+			<ul>
+		 		<li>
+		 			<label for="correo">Usurio (E-mail ó Tel.):</label>
+		 			<input type="text" name="correo" class="large" placeholder="juan23@servidor.com" />
+		 		</li>
+		 		<li>
+					<label for="clave"> Clave: </label>
+					<input type="password" name="clave" class="large" />
+				</li>
+				<li>
+					<label for="botton">  </label>
+					<input type="submit" value="Entrar" />
+				</li>
+		 	</ul>
+			<a href="{{ url_for('hacerRegistro') }}"><h2 class="cntnt">Registrarse</h2></a>
+		</fieldset>
+	</form>
+</div>
+
+

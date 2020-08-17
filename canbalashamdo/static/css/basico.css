@@ -1,0 +1,387 @@
+/********************************************
+		CODIGO CSS
+********************************************/
+:root {
+	/* DEFINICION DE COLORES */
+	--brand-primary: #337ab7;
+	--brand-success: #5cb85c;
+	--brand-info:    #5bc0de;
+	--brand-warning: #f0ad4e;
+	--brand-danger:  #d9534f;
+
+	/* DEFINICION DE GRISES */
+	--gray-darker:  #222;
+	--gray-dark:    #333;
+	--gray:         #555;
+	--gray-light:   #777;
+	--gray-lighter: #eee;
+
+	/* Definicion de varables tipo de Textos */
+	--font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--font-family-serif:       Georgia, "Times New Roman", Times, serif;
+	--font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+	--font-family-base:        var(--font-family-sans-serif);
+
+	/* DEFINICION DEL TAMAÑO DE LETRA*/
+	--font-size-base:	14px;
+	--font-size-large:  18px;
+	--font-size-small:  12px;
+
+	--font-size-h1:     36px;
+	--font-size-h2:     30px;
+	--font-size-h3:     24px;
+	--font-size-h4:     var(--font-size-large);
+	--font-size-h5:     var(--font-size-base);
+	--font-size-h6:     var(--font-size-small);
+
+	--headings-font-family:    inherit;
+	--headings-font-weight:    500;
+	--headings-line-height:    1.1;
+	--headings-color:          inherit;
+
+	/* cambia el color del hiperlinkque ha sido picado*/
+	--link-color:       var(--brand-danger);
+	--link-hover-color: var(--brand-success);
+}
+
+html {
+	width: 100%;
+	background-color: #FFF;
+}
+
+aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+	padding: 10px;
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: var(--font-family-base);
+	font-size: var(--font-size-base);
+	color: var(--gray-lighter);
+	background-color: var(--brand-primary);
+}
+
+
+
+header {
+	width: 100%;
+	height: 10vw;
+	color: var(--brand-danger);
+	background-color: var(--gray-lighter);
+}
+
+
+footer {
+	color: var(--gray-darker);
+	background-color: var(--gray-lighter);
+	font-size: var(--font-size-small);
+	display: block;
+	padding: 1em;
+	clear: both;
+	text-align: center;
+}
+
+nav.nvo1 {
+	width: 100%;
+	line-height: auto;
+
+}
+ul.nvo2 {
+	background-color: var(--gray-lighter);
+	list-style: none;
+	display: block;
+	width: 100%;
+	margin:  0em;
+	padding: 0em;
+	text-align: justify;
+	margin-bottom: -1.4em;
+}
+ul.nvo2:after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+}
+li.nvo3 {
+	background-color: var(--brand-info);
+	display: inline-block;
+	padding: 8px;
+	font-size: var(--font-size-h4);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+a {
+	color: var(--link-color);
+	text-decoration: none;
+
+	&:hover {
+		color: var(--link-hover-color);
+		text-decoration: underline;
+  }
+}
+
+.imagen {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+aside.lateral{
+	width: 50%;
+	height: 100%;
+}
+
+article {
+	padding-left:32%;
+	width: 100%;
+	height: 100%;
+	border: 1px solid silver;
+	border-radius: 5px;
+}
+
+.articulo { 
+	display: block;
+	width: 100%;
+	height: 11vw;
+	padding: 0em 2em 0em 2em;
+	clear: both;
+}
+
+/***************************************
+ Aqui da formato a la tabla de imagen
+***************************************/
+.wrapper {
+	width: 100%;
+	//height: auto;
+	text-align: center;
+	padding: 0.5em 2em 0.5em 2em;
+}
+.outer {
+	display: table;
+	width: auto;
+}
+.outer .inner {
+	width: 60%;
+	display: table-cell;
+	text-align: left;
+	vertical-align: top;
+	padding-left: 1em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+	position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  	display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  	cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 20%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+  width: 100%;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+p.break {
+	text-align: justify;
+	word-wrap: break-word;
+	padding: 0 1em 0 0;
+	font-size: 1.1em;
+	font-family: var(--font-family-serif);
+}
+
+h3 {
+	font-size: 1.5em;
+	text-align: center;
+	margin-bottom: -0.5em;
+	margin-top: 0.25em;
+}
+
+/*
+	Estilo para el formulario
+*/
+
+fieldset {
+	background-color: #f1f1f1;
+	border: none;
+	border-radius: 2px;
+	margin-bottom: 12px;
+	overflow: hidden;
+	padding: 0 10px;
+}
+
+ul {
+	background-color: #fff;
+	border: 1px solid #eaeaea;
+	list-style: none;
+	margin: 12px;
+	padding: 12px;
+}
+
+ul li {
+	margin: 1em 0;
+}
+
+label {
+	display: inline-block;
+	padding: 3px 6px;
+	text-align: right;
+	width: 12em;
+	vertical-align: top;
+	color: var(--brand-warning);
+}
+
+input, label, select, button {
+	font-size: 110%;
+}
+
+#inputCor {
+	color: #000;
+	font-size: var(--font-size-base);
+}
+
+.small {
+	width: 75px;
+}
+.medium {
+	width: 150px;
+}
+.large {
+	width: 250px;
+}
+.areatexto{
+	width: 250px;
+}
+
+legend {
+	background-color: #dedede;
+	border-bottom: 1px solid #d4d4d4;
+	border-top: 1px solid #d4d4d4;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px #ccc;
+	color: #fff;
+	font-size: 1.1em;
+	margin: 12px;
+	padding: 0.3em 1em;
+	text-shadow: #9FBEB9 1px 1px 1px;
+	text-transform: uppercase;
+}
+
+legend.account { background-color: var(--brand-success);}
+legend.address { background-color: #4494C9; }
+legend.public-profile { background-color: #377D87; }
+legend.emails { background-color: #717F88; }
+
+form {
+	width: 50%;
+	float: right;
+}
+
+
+input[type="submit"] {
+	padding: 0.5em 2em;
+	border-radius: 5px;
+	background-color: var(--brand-success);
+	color: var(--gray-lighter);
+	font-weight: bolder;
+}
+
+
+.form_01 {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.imagen01 {
+	--ruta: url('../img/imagePrub.jpg');
+	background-image: var(--ruta);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 45%;
+ 	height: 45vw;
+}
+
+h2 {
+	border-width: 0px;
+	padding: 1em;
+}
+
+.cntnt {
+	background-color: var(--brand-primary);
+	font-size: var(--font-size-h4);
+	color: #FFF;
+	width: 9em;
+	height: 2em;
+	border-radius: 10px;
+	text-align: center;
+	background-clip: padding-box;
+	float: right;
+}

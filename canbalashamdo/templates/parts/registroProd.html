@@ -1,0 +1,34 @@
+<br>
+<form method="POST" action="{{ url_for('hacerRegistro') }}">
+  <fieldset>
+    <legend class="account">Objeto a Canbalashar</legend>
+    <ul>
+      <li>
+        <label for="objeto">Que objetos es: </label>
+        <input type="text" name="objeto" class="large" placeholder="Ruedas de carro" required
+          title="Bebe llanar el espacio" />
+      </li>
+      <li>
+        <label for="descripcion">Descipción: </label>
+        <textarea name="descripcion" class="areatexto"  cols="50" rows="8">Ruedas de automovil, Renault Twingo, se encuetran con rines ...</textarea>
+      </li>
+      <li>
+        <label for="cambio_por">Deseo a Cambio: </label>
+        <textarea name="cambio_por"  class="areatexto" cols="50" rows="8">Me interesa cambiarlas por: un comedor de seis puestos ó camarote ...</textarea>
+      </li>
+      <li>
+        <label for="localizacion">Localización del Objeto: </label>
+        <input type="text" name="localizacion" class="large" placeholder="calle 15 No 24-33, Bucaramanga, Santander" required
+          title="Bebe llanar el espacio" />
+      </li>
+      <li>
+        <label for="valor_est_prop">Valor Aproximado: </label>
+        <input type="number" name="valor_est_prop" class="medium" required title="Bebe llanar el espacio">Valor en Pesos Colombianos</input>
+      </li>
+      <li>
+        <label for="enviar">Enviar la Información </label>
+        <input type="submit" value="ENVIAR" />
+      </li>
+    </ul>
+  </fieldset>
+</form>

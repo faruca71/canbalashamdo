@@ -1,0 +1,132 @@
+
+@charset="UTF-8"
+/* DOCUMENTO CSS*/
+:root {
+	/* Definicion de varables tipo de Textos */
+	--font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--font-family-serif:       Georgia, "Times New Roman", Times, serif;
+	--font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+	--font-family-base:        var(--font-family-sans-serif);
+
+	--font-size-base:          14px;
+	--font-size-large:         ceil((var(--font-size-base) * 1.25)); // ~18px
+	--font-size-small:         ceil((var(--font-size-base) * 0.85)); // ~12px
+
+	--font-size-h1:            floor((var(--font-size-base) * 2.6)); // ~36px
+	--font-size-h2:            floor(var(--font-size-base) * 2.15)); // ~30px
+	--font-size-h3:            ceil((var(--font-size-base) * 1.7)); // ~24px
+	--font-size-h4:            ceil((var(--font-size-base) * 1.25)); // ~18px
+	--font-size-h5:            var(--font-size-base);
+	--font-size-h6:            ceil((var(--font-size-base) * 0.85)); // ~12px
+
+	--line-height-base:        1.428571429; // 20/14
+	--line-height-computed:    floor(var(--font-size-base) * var(--line-height-base)); // ~20px
+
+	--headings-font-family:    inherit;
+	--headings-font-weight:    500;
+	--headings-line-height:    1.1;
+	--headings-color:          inherit;
+
+	/* DEFINICION DE COLORES */
+	--brand-primary: #337ab7; //darken(#428bca, 6.5%); // #337ab7
+	--brand-success: #5cb85c;
+	--brand-info:    #5bc0de;
+	--brand-warning: #f0ad4e;
+	--brand-danger:  #d9534f;
+
+	/* DEFINICION DE GRISES */
+	--gray-darker:  lighten(#000, 13.5%); // #222
+	--gray-dark:    lighten(#000, 20%);   // #333
+	--gray:         lighten(#000, 33.5%); // #555
+	--gray-light:   lighten(#000, 46.7%); // #777
+	--gray-lighter: lighten(#000, 93.5%); // #eee
+
+// Variables
+	--link-color:       var(--brand-primary);
+	--link-hover-color: darken(var(--link-color), 15%);
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-family-sans-serif);
+	color: var(--brand-info);
+	background-color: $brand-primary;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+	padding: 10px;
+}
+
+header {
+	color: var(--brand-success);
+	background-color: var(--gray);
+}
+
+footer {
+	color: #000;
+	background-color: #FFF;
+}
+
+article {
+	color: #000;
+}
+
+aside {
+	float: right;
+	width: 25%;
+	border: thin solid #FFF;
+	background-color: #999;
+	padding: 10px;
+	margin: 10px;
+}
+
+figure {
+	background-color: #CCC;
+	margin: 10px;
+	padding: 10px;
+	float: right;
+	width: 160px;
+	height: 180px;
+}
+
+section {
+	padding: 0px;
+}
+
+nav{
+	float: left;
+	font-size: .75em;
+}
+
+p {
+	color: #36c;
+	font-family: var(--font-family-serif);
+	font-weight: bold;
+}
+
+img {
+	float: left;
+	margin-right: 10px;
+}
+
+a {
+	color: var(--link-color);
+	text-decoration: none;
+
+	&:hover {
+		color: var(--link-hover-color);
+		text-decoration: underline;
+  }
+}
+
+input[type="text"] {
+width: 150px;
+}
+
+div {
+background: var(--brand-danger);
+}
+
